@@ -1,0 +1,149 @@
+
+
+    <div class="main">
+        <div class="container">
+            <div class="signup-content">
+                <div class="signup-img">
+                    <img src="/assets/images/signup-img.jpg" alt="" class="img">
+                </div>
+                <div class="signup-form">
+                    <form method="POST" class="register-form" id="register-form">
+                        <h2>student registration form</h2>
+                        <div class="form-group">
+                            <label for="id">ID :</label>
+                            <input type="text" name="id" [(ngModel)]="id" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name :</label>
+                                <input type="text" name="name" [(ngModel)]="name" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="father_name">Last Name :</label>
+                                <input type="text" name="lastName" [(ngModel)]="lastName" required/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email :</label>
+                            <input type="email" name="email" [(ngModel)]="email" required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password :</label>
+                            <input type="password" name="password" [(ngModel)]="password" required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address :</label>
+                            <input type="text" name="address" [(ngModel)]="address" required/>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="Country">Country :</label>
+                                <div class="form-select">
+                                    <select name="country" [(ngModel)]="countryId" required>
+                                        
+                                        <option value  =1>India</option>
+                                        <option value  =2>USA</option>
+                                    </select>
+                                    <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="state">State :</label>
+                                <div class="form-select">
+                                    <select name="stateId" [(ngModel)]="stateId" required>
+                                      <option value  =11>Maharashtra</option>
+                                        <option value  =22>California</option>
+                                    </select>
+                                    <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">City :</label>
+                                <div class="form-select">
+                                    <select name="cityId" [(ngModel)]="cityId" required>
+                                        <option value  =10>Pune</option>
+                                        <option value  =30>Mumbai</option>
+                                        <option value  =20>Sanjose</option>
+                                    </select>
+                                    <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-radio">
+                            <label for="gender" class="radio-label">Gender :</label>
+                            <div class="form-radio-item">
+                                <input type="radio" name="gender" value=1 id="male" [(ngModel)]="gender">
+                                <label for="male">Male</label>
+                                <span class="check"></span>
+                            </div>
+                            <div class="form-radio-item">
+                                <input type="radio" name="gender" value="0" id="female"  [(ngModel)]="gender">
+                                <label for="female">Female</label>
+                                <span class="check"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="birth_date">DOB :</label>
+                            <input type="date" name="dob" [(ngModel)]="dob" required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactno">Contact No :</label>
+                            <input type="number" name="contactNo" [(ngModel)]="contactNo" required/>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="Branch">Branch :</label>
+                                <div class="form-select">
+                                    <select name="branchId" [(ngModel)]="branchId" required>
+                                        <option value =1111>DAC</option>
+                                        <option value  =3333>DBDA</option>
+                                    </select>
+                                    <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="batch">Batch :</label>
+                                <div class="form-select">
+                                    <select name="batchId" [(ngModel)]="batchId" required>
+                                        <option value  =112>2019</option>
+                                        <option value  =111>2018</option>
+                                    </select>
+                                    <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="Country">Role :</label>
+                                <div class="form-select">
+                                    <select name="role" [(ngModel)]="role" required>
+                                        <option value  =""></option>
+                                        <option value  ="ALUMNI">ALUMNI</option>
+                                        <option value  ="STUDENT">STUDENT</option>
+                                        <option value  ="ADMIN">ADMIN</option>
+                                    </select>
+                                    <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                </div>
+                            </div>
+                         </div>
+                         <div class="form-group">
+                            <input type="file" (change)="onFileChanged($event)">
+                        </div>
+                
+                        <!--<div class="form-group">
+                            <input type="button" (click)="onUpload()" value="Upload">
+                        </div>-->
+                        <div class="form-submit">
+                            <button type="submit"  class="submit" name="reset" id="reset"  >Reset All</button>
+                            <button type="submit"  class="submit" name="submit" id="submit" (click)="onUpload()">Submit Form</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+   

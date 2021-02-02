@@ -1,0 +1,20 @@
+<marquee><h3>Batch Details</h3></marquee>
+<div>
+    <table id="batch">
+        <tr>
+            <th>Batch ID</th>
+            <th>Passing Year</th>
+            <th>Updation</th>
+        </tr>
+        <tr *ngFor="let b of arr">
+          <td>{{b.batchId}}</td> 
+          <td>{{b.passingYear}}</td>
+          <td><button class="btn btn-warning" (click)="updateBatch(b)"> Update </button></td>
+        </tr>
+    </table>
+
+    <div>
+        <br/>
+<app-batch-form [uob]="ob" (myevent)="arr=$event"></app-batch-form>
+    </div>
+</div>

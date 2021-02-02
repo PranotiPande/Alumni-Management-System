@@ -1,0 +1,24 @@
+<div>
+    <img src="/assets/images/img3.jpg" class="body1">
+<div class="login-box">
+    <h1>Post Job Vacancy</h1>
+        <form>
+        <!-- <p>Alumni ID:</p>
+        <input type="text" {{ID}} >-->
+        <p>Job Title</p>
+        <input type="text" name="title" [(ngModel)]="title" placeholder="Enter job Title">
+        <p>Description</p>
+        <textarea rows="9" cols="40" name="description" [(ngModel)]="description" placeholder="Enter Job description"></textarea>
+        <p>start Date</p>
+        <input type="date" name="startdate" [(ngModel)]="startDate"/>
+        <p>End Date</p>
+        <input type="date" name="enddate" [(ngModel)]="endDate"/>
+        <p>URL</p>
+        <input type="text" name="link" [(ngModel)]="link" placeholder="Enter Job Link here">
+        <input type="submit" name="submit" (click)="postJobOpenings()" value="Post">   
+        </form>
+    
+    
+    </div>
+
+</div>

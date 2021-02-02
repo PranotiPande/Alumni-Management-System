@@ -1,0 +1,40 @@
+<div>
+    <table>
+        <tr>
+            <td>
+                <h3>JOB OPENINGS</h3>
+                <hr/>
+            </td>
+        </tr>
+        <tr *ngFor="let j of jobarr">
+     <td><h4 class="title"> {{j.title}}</h4>
+       <label>Details:</label> {{j.description}}<br>
+       <label>Starting From:</label> {{j.startDate}}<br>
+      <label>Last Date:</label> {{j.endDate}}<br>
+       <label>Apply @ </label><a href="{{j.link}}">{{j.link}}</a>
+       <hr/>
+    </td>
+        </tr>
+       
+    </table>
+</div>
+<!--
+<div class="outer">
+<table>
+<tr>
+    <td>
+        <h3>JOB OPENINGS</h3>
+        <hr/>
+    </td>
+</tr>
+<tr *ngFor="let j of jobarr">
+    <td><h4 class="title"> {{j.title}}</h4></td>
+       <td><label>Details:</label> {{j.description}}<br></td>
+       <td><label>Starting From:</label> {{j.startDate}}<br></td>
+        <td><label>Last Date:</label> {{j.endDate}}<br></td>
+        <td><label>Apply @ </label><a href="{{j.link}}">{{j.link}}</a></td>
+    <hr/>
+</tr>
+</table>
+</div>
+-->

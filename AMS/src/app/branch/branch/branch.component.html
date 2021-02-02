@@ -1,0 +1,25 @@
+<marquee><h3>Branch Details</h3></marquee>
+<div>
+    <table id="branch">
+      <tr>
+        <th>Branch ID</th>
+        <th>BranchName Year</th>
+        <th>updateBranch</th>
+        <th>DeleteBranch</th>
+    </tr>
+        <tr *ngFor="let b of arr">
+          <td>{{b.branchId}}</td> 
+          <td>{{b.branchName}}</td>
+          <td><button class="btn btn-warning" (click)="updateBranch(b)"> Update </button></td>
+          <td><button class="btn btn-danger" (click)="deleteBranch(b)"> Delete </button></td>
+        </tr>
+
+    </table>
+    <button type="button" name="btn" (click)="AddBranch()">Add Branch</button>
+    <div *ngIf=flag>
+      <br/>
+      <app-branch-form [uob]="ob" (myevent)="arr=$event"></app-branch-form>
+    </div>
+</div>
+
+

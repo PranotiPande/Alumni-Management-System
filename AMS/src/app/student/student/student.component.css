@@ -1,0 +1,62 @@
+
+.avatar{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    left: calc(50% - 50px);
+    
+}
+.login-box{
+    width: 420px;
+    height: 670px;
+    background: rgba(0, 2, 24, 0.336);
+    color: #fff;
+    top: 55%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+.pic{
+    width:100%;
+    height:700px;  
+}
+.w3-btn {width:150px;}
+#event {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #event td, #branch th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #event tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #event tr:hover {background-color: #ddd;}
+  
+  #event th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color:rgb(75, 2, 47);
+    color: #dcdce7;
+  }
+  .logout{
+    text-align: right;
+    border: 0;
+  }
+
+  button[type=button] {
+    width: 100%;
+    background-color: #0a0a0a;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }

@@ -1,0 +1,75 @@
+
+
+<div>
+   <img src="/assets/images/img5.png" class="pic">
+    <div class="login-box">
+    <div>
+    <div class="box"> 
+     
+        <form method="POST">
+          
+            <div class="container row">
+                <div class="col-md-12">
+                    <div *ngIf=retrievedImage>
+                        <img [src]="retrievedImage" class="avatar" >
+                    </div>
+                </div>
+            </div>
+            <!--<img src="/assets/images/avatar.png" class="avatar" >-->
+        <h3>{{firstName|uppercase}} &nbsp;{{lastName|uppercase}} </h3>
+        <h4>{{address}},{{city.cityName}} </h4>
+        <h4>Banch:{{branch.branchName}}</h4>
+        <!--<h4>{{passingYear}}</h4>
+       <h4>{{branchName}}</h4>-->
+        <h4>{{email}}</h4>
+      
+            <!--<button type="button" class="btn btn-warning" name="jobOpenings" (click)="viewjobOpenings()"> Job Openings </button>-->
+
+        <button type="button" name="jobOpenings"  (click)="viewjobOpenings()" class="btn btn-primary" >Job Openings</button>
+
+        <button type="button" name="alumniProfiles" (click)="viewAlumniProfile()" class="btn btn-primary">Alumni Profiles</button>
+        
+        <button type="button" name="viewEvents" (click)="viewEvents()" class="btn btn-primary">View Events</button>
+ 
+        <div class="logout">
+              <button type="button" name="logout" (click)="logout()" class="btn btn-primary">logout</button>
+         </div>
+            
+           <!-- <div class="form-group">
+                <input type="file" (change)="onFileChanged($event)">
+            </div>
+    
+            <div class="form-group">
+                <input type="button" (click)="onUpload()" value="Upload">
+            </div>-->
+           <!-- <a routerLink="/feedback">Feedback</a>-->
+        </form>
+        <!--div>
+        <a routerLink="/feedback">Feedback</a>
+        </div>-->
+    </div>
+</div>
+</div>
+
+</div>
+<div *ngIf=flag class="event">
+    <table id="event" >
+        <tr>
+            <th>Event Title</th>
+            <th>Event Description</th>
+        </tr>
+        <tr *ngFor="let e of eventarr">
+            <td>{{e.eventTitle}}</td>
+            <td>{{e.eventDescription}}</td>
+        </tr>
+    </table>
+ </div>
+
+ <div *ngIf="jflag">
+     <app-job-openings></app-job-openings>
+ </div>
+ <div *ngIf="aflag">
+    <app-alumni-list></app-alumni-list>
+ </div>
+
+

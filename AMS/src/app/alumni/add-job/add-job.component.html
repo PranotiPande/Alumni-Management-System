@@ -1,0 +1,20 @@
+<div>
+  
+        <img src="/assets/images/img11.png" class="body1">
+    <div class="login-box">
+        <h1>ADD JOB DETAILS</h1>
+        <form method="POST">
+
+<!--Company Name:<input type=text name="companyName" [(ngModel)]="companyName"><br><br>-->
+        <p>Designation:</p>
+        <input type=text name="designation" [(ngModel)]="designation"><br><br>
+        <p>CompanyName:</p>
+        <input type=text name="companyName" [(ngModel)]="companyName"><br><br>
+        <p>JoinDate:</p>
+        <input type=date name="joinDate" [(ngModel)]="joinDate"><br><br>
+        <p>leaving Date:</p>
+        <input type=date name="leavingDate" [(ngModel)]="leavingDate"><br><br>
+        <input type="submit"  class="submit" name="addjobDetails" id="addjobDetails" (click)="addjobDetails()"  value="Post">
+        </form>
+     </div>
+</div>

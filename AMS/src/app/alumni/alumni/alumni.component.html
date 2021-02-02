@@ -1,0 +1,61 @@
+
+<div>
+    <img src="/assets/images/img10.png" class="pic">
+ <div class="login-box">
+    
+<div>
+   
+    <div class="box">
+        
+        <form method="POST">
+            <div class="container row">
+                <div class="col-md-12">
+                    <div *ngIf=retrievedImage>
+                        <img [src]="retrievedImage" class="avatar">
+                    </div>
+                </div>
+            </div>
+           
+        <h3>{{alumni.firstName|uppercase}} &nbsp;{{alumni.lastName|uppercase}} </h3>
+        <h4>{{alumni.address}} ,{{city.cityName}}</h4>
+        <h4>{{branch.branchName}}</h4>
+        <h4>{{alumni.email}}</h4>
+        <div *ngIf=jobdetails>
+            <h4>Company Name:{{jobdetails.companyName}}</h4> 
+        </div>
+<div class="container">
+        
+        <button type="button" name="viewEvents" (click)="viewEvents()">View Events</button>
+        <a routerLink="/job"><div class="button">Post Job</div></a> 
+         <div *ngIf="!jobdetails">  
+              <a routerLink="/jobdeatils"><div class="button">Add Job </div></a>
+         </div>
+</div>
+          
+            
+           
+<button type="button" name="logout" (click)="logout()">logout</button>
+<a routerLink="/feedback">Feedback</a>
+            <br>
+         </form>
+    </div>
+</div>
+</div>
+</div>
+<div *ngIf=flag>
+    <table id="event">
+        <tr>
+            <th>Event ID</th>
+            <th>Event Title</th>
+            <th>Event Description</th>
+        </tr>
+        <tr *ngFor="let e of eventarr">
+            <td>{{e.eventId}}</td>
+            <td>{{e.eventTitle}}</td>
+            <td>{{e.eventDescription}}</td>
+        </tr>
+    </table>
+ </div>
+
+
+ 

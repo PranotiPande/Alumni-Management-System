@@ -1,0 +1,21 @@
+
+<div>
+    <form method="POST">
+        <table>
+            <tr>
+                <td>ID:</td>
+                <td>{{ID}}</td>
+            </tr>
+            <tr>
+               
+                <td>description:</td>
+                <td><textarea cols="60" rows="5"  [(ngModel)]="description">write here...</textarea></td>
+            </tr>
+            <tr>
+                <td>feedback Date:</td>
+                <td>{{Date|date: ' yyyy-MM-dd'}}</td>
+            </tr>
+        </table>
+        <button type="button" name="btn" (click)="Addfeedback()">submit</button>
+    </form>
+ </div>

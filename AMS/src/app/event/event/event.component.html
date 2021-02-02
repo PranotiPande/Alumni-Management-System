@@ -1,0 +1,20 @@
+<marquee><h3>Event Details</h3></marquee>
+<div>
+    <table id="event">
+        <tr>
+            <th>Event ID</th>
+            <th>Event Title</th>
+            <th>Event Description</th>
+            <th>UpdateEvent</th>
+        </tr>
+        <tr *ngFor="let e of arr">
+            <td>{{e.eventId}}</td>
+            <td>{{e.eventTitle}}</td>
+            <td>{{e.eventDescription}}</td>
+            <td><button class="btn btn-warning" (click)="updateEvent(e)"> Update</button> </td>
+        </tr>
+    </table>
+    <div>
+        <app-event-form [uob]="ob" (myevent)="arr=$event"></app-event-form>
+    </div>
+</div>
